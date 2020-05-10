@@ -1,0 +1,31 @@
+{
+  "name": "huaheservice",
+  "version": "1.0.0",
+  "description": "为网页程序启动本地应用。",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "open": "^7.0.3",
+    "raw-body": "^2.4.1",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "later"
+  },
+  "keywords": [
+    "lauching",
+    "applications"
+  ],
+  "author": "鎏金天涯",
+  "license": "MIT"
+}
