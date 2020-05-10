@@ -25,7 +25,7 @@
       var docName = vm.route.file
       if (docName) {
         var host = win.location.host;
-        var localhost = host != docEditBase
+        var localhost = host.startsWith('localhost') || host.startsWith('127.0.0.1')
         if (localhost) {
           var fileUrl = buildUrl(docName, 'typora')
           var xmlHttp = new XMLHttpRequest();
