@@ -106,7 +106,8 @@ function httpGet(body)
 
 let body = {
   //para: '/Users/mai/projects/tianyawiki/docs/_trash/temp.md', 
-  para: '_trash/temp.txt',
+  //para: '_trash/temp.txt',
+  para: '_resources/pdf/增删卜易.pdf',
   //application: 'textmate',
 };
 

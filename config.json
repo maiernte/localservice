@@ -3,7 +3,8 @@
   "port": 3001,
   "editors": {
     "js": "textmate",
-    "md": "typora"
+    "md": "typora",
+    "pdf": "preview"
   },
   "defaut_editor": "textmate"
 }

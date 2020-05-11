@@ -43,3 +43,11 @@ Error: Origin not allowed by CORS
     at Layer.handle [as handle_request] (/Users/mai/projects/localservice/node_modules/express/lib/router/layer.js:95:5)
     at /Users/mai/projects/localservice/node_modules/express/lib/router/index.js:281:22
     at Function.process_params (/Users/mai/projects/localservice/node_modules/express/lib/router/index.js:335:12)
+华鹤本地服务 启动端口：3001
+err 1 ReferenceError: application is not defined
+    at open.then (/Users/mai/projects/localservice/action.js:79:24)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+华鹤本地服务 启动端口：3001
+err 1 ReferenceError: application is not defined
+    at open.then (/Users/mai/projects/localservice/action.js:79:24)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
