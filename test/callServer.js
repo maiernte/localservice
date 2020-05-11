@@ -92,14 +92,9 @@ async function OpenMDFileBrowser(fileurl) {
 // npm install xmlhttprequest
 // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 // var xhr = new XMLHttpRequest();
-function httpGet(fileurl)
+function httpGet(body)
 {
-    let body = {
-      para: fileurl,
-      application: 'typora'
-    };
     let uri = basicuri + '/lauch'
-
     let params = btoaUTF8(JSON.stringify(body));
     let theUrl = `${uri}?params=${params}`
     console.log(theUrl)
@@ -109,7 +104,15 @@ function httpGet(fileurl)
     return xmlHttp.responseText;
 }
 
+let body = {
+  //para: '/Users/mai/projects/tianyawiki/docs/_trash/temp.md', 
+  para: '_trash/temp.txt',
+  //application: 'textmate',
+};
+
 // decodeURI
 //OpenMDFile('/Users/mai/projects/tianyawiki/docs/README.md')
 //OpenMDFileBrowser('/Users/mai/projects/tianyawiki/docs/README.md')
-httpGet('README.md')
+
+httpGet(body)
+// httpGet('_trash/temp.md')

@@ -1,0 +1,9 @@
+{
+  "ROOT_Docsify": "/Users/mai/projects/tianyawiki/docs/",
+  "port": 3001,
+  "editors": {
+    "js": "textmate",
+    "md": "typora"
+  },
+  "defaut_editor": "textmate"
+}

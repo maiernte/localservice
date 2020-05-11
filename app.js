@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 const cors = require('cors');
 const { parseRequest, openFileInEditor, parsereRequestURL } = require('./action')
+const config = require('./config.json')
 
 const allowedOrigins = [
   'capacitor://localhost',
@@ -27,8 +28,13 @@ app.use(cors());
 
 app.post('/lauch', cors(corsOptions), function(req,resp){
   parseRequest(req)
-  .then(data => {
-    return openFileInEditor(data.para, data.application)
+  .then(d => {
+    let data = d
+    if (typeof d === 'string') {
+      data = JSON.parse(d)
+    }
+
+    return openFileInEditor(data)
   }).then(msg => {
     resp.send(`201：${msg}`)
   }).catch(errmsg => {
@@ -44,7 +50,7 @@ app.get('/lauch', cors(corsOptions), function(req,resp){
       data = JSON.parse(d)
     }
     
-    return openFileInEditor(data.para, data.application)
+    return openFileInEditor(data)
   }).then(msg => {
     resp.send(`201：${msg}`)
   }).catch(errmsg => {
@@ -52,6 +58,6 @@ app.get('/lauch', cors(corsOptions), function(req,resp){
   })
 })
 
-app.listen(3001, function () {
-  console.log('华鹤本地服务 启动端口：3001!');
+app.listen(config.port, function () {
+  console.log(`华鹤本地服务 启动端口：${config.port}`);
 });
